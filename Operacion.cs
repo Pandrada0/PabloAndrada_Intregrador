@@ -36,30 +36,31 @@ namespace Entidades
 
         public Numeracion Operar(char operador)
         {
-
+            double aux1 = double.Parse(this.primerOperando.Valor);
+            double aux2 = double.Parse(this.segundoOperando.Valor);
+            double aux3;
+            aux3 = aux1 + aux2;
             Numeracion resul = new Numeracion(double.MinValue, Numeracion.ESistema.Decimal);
+            return resul;
 
-            switch (operador)
-            {
-                case '-':
-                    resul = PrimerOperando - SegundoOperando;
-                    break;
-                case '*':
-                    resul = PrimerOperando * SegundoOperando;
-                    break;
-                case '/':
-                    if (double.Parse(SegundoOperando.Valor) != 0)
-                    {
-                        resul = PrimerOperando / SegundoOperando;
-                    }
-                    break;
-                default:
-
-                    resul = PrimerOperando + SegundoOperando;
-                    break;
-            }
-            Numeracion retorno = new Numeracion(resul.Valor, Numeracion.ESistema.Decimal);
-            return retorno;
+            //switch (operador)
+            //{
+            //    case '-':
+            //        //resul = PrimerOperando - SegundoOperando;
+            //        break;
+            //    case '*':
+            //        //resul = PrimerOperando * SegundoOperando;
+            //        break;
+            //    case '/':
+            //        //if (double.Parse(SegundoOperando.Valor) != 0)
+            //        //{
+            //        //    resul = PrimerOperando / SegundoOperando;
+            //        //}
+            //        break;
+            //    default:
+                                
+            //        break;
+            //}
         }
     }
 }
